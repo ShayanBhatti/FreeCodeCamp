@@ -4,7 +4,7 @@ const helmet = require('helmet');
 
 
 
-
+app.use(helmet.hidePoweredBy({setTo: '4.2.0'}))
 
 
 

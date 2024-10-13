@@ -4,12 +4,13 @@ const helmet = require('helmet');
 
 
 
-app.use(helmet.hidePoweredBy({setTo: '4.2.0'}))
-app.use(helmet.frameguard({action:'deny'}))
+app.use(helmet.hidePoweredBy({setTo: '4.2.0'})); //By this we have hide the powered  by option like e.g powered BY express
+
+app.use(helmet.frameguard({action:'deny'})); //mitigate the risk of iframe  thorugh attack
 
 
 
-
+app.use(helmet.xXssProtection()); // Help against the cross site scripting malicious code injection
 
 
 

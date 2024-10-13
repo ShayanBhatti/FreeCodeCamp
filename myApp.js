@@ -10,7 +10,7 @@ app.use(helmet.frameguard({action:'deny'})); //mitigate the risk of iframe  thor
 
 
 
-app.use(helmet.xssProtection()); // Help against the cross site scripting malicious code injection
+app.use(helmet.xXssProtection()); // Help against the cross site scripting malicious code injection
 
 
 

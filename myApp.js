@@ -13,9 +13,11 @@ app.use(helmet.frameguard({action:'deny'})); //mitigate the risk of iframe  thor
 app.use(helmet.xssFilter()); // Help against the cross site scripting malicious code injection
 app.use(helmet.noSniff()); 
 app.use(helmet.ieNoOpen());
+//Middle ware for browswer for using only https for 90 days 
+const timeInSecond = 90*24*60*60;
+app.use(helmet.hsts({maxAge: timeInSecond, force:true}));
 
-
-
+ 
 
 
 

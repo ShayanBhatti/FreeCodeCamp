@@ -16,10 +16,11 @@ let round = 12;
 bcrypt.hash(input,round,(err,hash)=>{
   console.log(hash);
   
-})
+  
 bcrypt.compare(input,hash, (error,result)=>{
   console.log("\n" + result + "\n");
   
+})
 })
 
 

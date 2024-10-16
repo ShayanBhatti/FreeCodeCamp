@@ -4,9 +4,10 @@
  *******************************************/
 
 var express = require("express");
+let bcrypt = require('bcrypt'); 
+let bcryptapp = bcrypt();
 var app = express();
 app.disable("x-powered-by");
-let bcrypt = require('bcrypt'); 
 var fs = require("fs");
 var path = require("path");
 

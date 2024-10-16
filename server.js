@@ -6,7 +6,7 @@
 var express = require("express");
 var app = express();
 app.disable("x-powered-by");
-let bcrypt = require("bcrypt");
+var bcrypt = require("bcrypt");
 var fs = require("fs");
 var path = require("path");
 

@@ -10,6 +10,19 @@ let bcrypt = require('bcrypt');
 var fs = require("fs");
 var path = require("path");
 
+let input = "Shaan";
+let round = 12;
+
+bcrypt.hash(input,round,(err,hash)=>{
+  console.log(hash);
+  
+})
+bcrypt.compare(input,hash, (error,result)=>{
+  console.log("\n" + result + "\n");
+  
+})
+
+
 app.use(function (req, res, next) {
   res.set({
     "Access-Control-Allow-Origin": "*",
@@ -33,6 +46,8 @@ app.get("/file/*?", function (req, res, next) {
 });
 
 var main = require("./myApp.js");
+const { log } = require("console");
+const { hash } = require("crypto");
 app.get("/app-info", function (req, res) {
   // list middlewares mounted on the '/' camper's app
   var appMainRouteStack = main._router.stack

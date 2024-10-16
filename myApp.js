@@ -57,8 +57,6 @@ app.use(helmet.contentSecurityPolicy({directives:{defaultSrc:["'self'"], scriptS
 
 
 
-
-
 module.exports = app;
 const api = require('./server.js');
 app.use(express.static('public'));
